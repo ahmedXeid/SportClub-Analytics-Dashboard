@@ -94,16 +94,16 @@ The dataset is organized into **4 main tables**:
 ## 🖼️ Screenshots
 
 ### Home Dashboard
-![Home Dashboard](./screenshots/Home.PNG)
+![Home Dashboard](./Screenshots/Home.PNG)
 
 ### Calculator Dashboard
-![Calculator Dashboard](./screenshots/Calculator.PNG)
+![Calculator Dashboard](./Screenshots/Calculator.PNG)
 
 ### Overall Dashboard
-![Overall Dashboard](./screenshots/Overall.PNG)
+![Overall Dashboard](./Screenshots/Overall.PNG)
 
 ### Members Dashboard
-![Members Dashboard](./screenshots/Members.PNG)
+![Members Dashboard](./Screenshots/Members.PNG)
 
 ---
 
