@@ -1,88 +1,93 @@
 # 🏋️‍♂️ Sport Club Analytics Dashboard (Power BI)
 
 ## 📌 Overview
-This Power BI dashboard provides insights into **membership, revenue, activities, and resource utilization** within a sports club.  
-It is designed for **club managers** to monitor key performance indicators, improve decision-making, and optimize member engagement.  
+This Power BI dashboard provides insights into **membership, payments, health tracking, and expenses** of a sports club.  
+It helps **managers and trainers** monitor revenue, member goals, trainer allocation, and club performance.  
 
 ---
 
 ## 🚀 Features
 
-### 👥 Membership Insights
-- Total members overview (active vs. inactive).  
-- Age and gender distribution.  
-- New vs. returning members trend.  
+### 👥 Membership & Demographics
+- Active vs. inactive users.  
+- Age & gender distribution.  
+- Membership type breakdown (Basic, Premium, Family, etc.).  
+- Trainer assignments and goals.  
 
-### 💰 Financial Analysis
-- Revenue from memberships, activities, and additional services.  
-- Monthly income trend line.  
-- Profit breakdown by category.  
+### 💳 Payments & Revenue
+- Track payments by date, mode (cash, card, transfer), and status.  
+- Monthly revenue trends.  
+- Average revenue per user.  
 
-### 🏀 Activities & Engagement
-- Participation by activity (football, swimming, tennis, gym, etc.).  
-- Peak hours and facility utilization.  
-- Retention analysis for long-term engagement.  
+### 💰 Expenses
+- Expense categories (staff, maintenance, utilities, etc.).  
+- Compare revenue vs. expenses.  
+- Profitability insights.  
 
-### 📊 Performance Metrics
-- Membership growth over time.  
-- Average revenue per member.  
-- Attrition/retention indicators.  
+### 📏 Health & Progress
+- Track BMI, height, starting weight.  
+- Compare user goals vs. current status.  
+- Identify members at health risk.  
 
-### 🌍 Geographic Distribution
-- Member locations visualized on a map (if available).  
+### 🎨 Consistent Visuals
+- **ColorCodes** table ensures a unified design system across dashboards.  
 
 ---
 
 ## 🛠️ Technologies Used
-- **Power BI**: Data visualization and dashboard creation.  
-- **Excel / CSV**: Data preparation and cleaning.  
+- **Power BI**: Dashboard and visualization.  
+- **Excel/CSV**: Data source preparation (`Dataset.csv`).  
 
 ---
 
 ## 📂 Data Preparation
-- **Dataset**: `Dataset.csv` (located in the `data` folder).  
-- **Fields Included**:  
-  - Member details (Name, Gender, Age, Join Date).  
-  - Membership type (Basic, Premium, Family, etc.).  
-  - Activity participation.  
-  - Payment and revenue information.  
-  - Location (optional).  
 
-- **Data Cleaning Steps**:  
-  - Calculated age from birthdate.  
-  - Standardized membership categories.  
-  - Added status classification: Active / Inactive.  
-  - Created calculated columns for revenue analysis.  
+The dataset is organized into **4 main tables**:
+
+1. **Users**  
+   - Fields: `UserID, UserName, Age, Gender, JoinDate, Goal, Trainer Name, Membership, MembershipStart, MembershipEnd, Status, Height_cm, StartingWeight, BMI`  
+   - Description: Contains personal, health, and membership details of each user.  
+
+2. **Payments**  
+   - Fields: `UserID, PaymentDate, Amount, Mode, Status`  
+   - Description: Tracks all member payments, payment method, and payment status.  
+
+3. **Expenses**  
+   - Fields: *(category, amount, date, description)*  
+   - Description: Records sports club expenses.  
+
+4. **ColorCodes**  
+   - Fields: *(metric, hex color)*  
+   - Description: Defines consistent theme colors for visuals.  
 
 ---
 
-## 📊 Visualizations
+## 📊 Dashboards
 
-### **Overview Dashboard**
-- Membership growth trend.  
-- Revenue over time.  
-- Gender and age breakdown.  
+### **Home Dashboard**
+- Quick KPIs (Total Members, Active Users, Monthly Revenue, Expenses).  
+- Revenue vs. Expenses comparison.  
+- Membership distribution.  
 
-### **Financial Dashboard**
-- Revenue by category (memberships, activities, extras).  
-- Monthly income distribution.  
-- Average revenue per member.  
+### **Calculator Dashboard**
+- Health calculator for BMI, progress, and fitness goals.  
+- User-level details to track improvements.  
 
-### **Engagement Dashboard**
-- Activity participation distribution.  
-- Retention rate tracking.  
-- Peak activity hours.  
+### **Overall Dashboard**
+- Monthly trends of memberships, payments, and expenses.  
+- Retention and churn analysis.  
+- Trainer workload distribution.  
 
 ### **Members Dashboard**
-- Detailed list of members with filters for demographics, membership type, and activity participation.  
-- Drill-down capability by department, age, or location.  
+- Full member list with filters (gender, age, trainer, membership type).  
+- Drill-down for individual progress and payments.  
 
 ---
 
 ## 🔍 Interactive Features
-- **Global Filters**: Membership type, status, location, gender.  
-- **Clickable Visuals**: Select activity types or demographics to filter all visuals.  
-- **Hover Tooltips**: Extra insights on each chart.  
+- **Global filters**: Membership type, trainer, gender, status.  
+- **Clickable visuals**: Filter all dashboards by clicking a category.  
+- **Hover tooltips**: Extra metrics on bars, lines, and pie slices.  
 
 ---
 
@@ -106,7 +111,8 @@ It is designed for **club managers** to monitor key performance indicators, impr
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/ahmedXeid/Sport-Club-Analytics-Dashboard.git
+   git clone https://github.com/your-username/Sport-Club-Analytics-Dashboard.git
+
 2. Open the Power BI file:
 
 . Launch Power BI Desktop.
@@ -121,11 +127,13 @@ It is designed for **club managers** to monitor key performance indicators, impr
 
 ⚡ Challenges & Solutions
 
-Revenue Classification: Used conditional columns to separate revenue sources.
+BMI Calculation: Used DAX measure to calculate BMI from height & weight.
 
-Retention Calculation: Created DAX measures to track returning vs. new members.
+Revenue vs. Expenses: Created measures to compare monthly income vs. club costs.
 
-Standardization: Cleaned inconsistent activity/membership names.
+Retention Tracking: Calculated members with continuous active memberships.
+
+Consistent Theme: Applied custom ColorCodes table for a unified dashboard look.
 
 📜 License
 
